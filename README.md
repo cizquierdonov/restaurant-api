@@ -1,4 +1,4 @@
-# "restaurant-api" - Technical assessment for Transbank
+# RESTAURANT-API - Technical assessment for Transbank
 
 Se recomienda utilizar Spring Tool Suite para editar, e importr como proyecto Gradle.
 
