@@ -1,0 +1,77 @@
+buildscript {
+	ext {
+		springBootVersion = '2.0.0.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply from: 'gradle/version.gradle'
+apply from: 'gradle/sources.gradle'
+apply from: 'gradle/dependencies.gradle'
+//apply from: 'gradle/tests.gradle'
+
+group = 'com.restaurant.api'
+version = "1.0.0"
+
+// This ensure only one main method will use on SpringBoot start.
+apply plugin: 'application'
+mainClassName = 'com.restaurant.api.Application'
+
+repositories {
+	mavenCentral()
+}
+
+compileJava {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
+
+allprojects {
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+        }
+    }
+}
+
+tasks.withType(JavaCompile){
+    options.warnings = true
+}
+
+
+dependencies {
+    configurations.all {
+        exclude group: "commons-logging", module: "commons-logging"
+        exclude group: "spring-boot-starter-logging", module: "spring-boot-starter-logging"
+    }
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	compile 'org.springframework.boot:spring-boot-starter'
+	compile 'org.springframework.boot:spring-boot-starter-web'
+	compile 'org.springframework:spring-web'
+
+	compile 'com.fasterxml.jackson.core:jackson-databind'
+	compile 'org.slf4j:jcl-over-slf4j'
+
+
+	compile group: 'org.springframework.security', name: 'spring-security-config', version: '5.2.1.RELEASE'
+	compile group: 'org.springframework.security', name: 'spring-security-core', version: '2.0.2'
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-activemq', version: '2.1.11.RELEASE'
+	//compile group: 'org.apache.activemq', name: 'activemq-all', version: '5.4.2'
+	compileOnly 'org.projectlombok:lombok'
+	testCompile 'org.springframework.boot:spring-boot-starter-test'	
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+configurations {
+    customProvidedRuntime
+}

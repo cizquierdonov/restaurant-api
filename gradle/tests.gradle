@@ -1,0 +1,40 @@
+apply plugin: 'info.solidsoft.pitest'
+apply plugin: 'jacoco'
+
+ext {
+    restAssuredVer = '3.0.5'
+}
+
+dependencies {
+    compile "io.rest-assured:json-path:${restAssuredVer}"
+    testCompile "io.rest-assured:rest-assured:${restAssuredVer}"
+}
+
+tasks.withType(Test){
+    testLogging {
+        exceptionFormat "full"
+        events "passed", "failed", "skipped"
+    }
+}
+
+/*pitest {
+    targetClasses = ['com.restaurant.api.*']
+    testSourceSets = [sourceSets.unitTest]
+    excludedClasses = [
+            'com.latam.com.latam.entities.*',
+            'com.latam.com.latam.ws.*',
+            'com.latam.com.latam.stl.web.filter.FilterAsInterceptorAdapter'
+    ]
+    threads = 4
+    outputFormats = ['XML', 'HTML']
+    coverageThreshold = 95
+    reportDir = 'build/reports/mutation-tests-results'
+    timestampedReports = false
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+    }
+}*/
+

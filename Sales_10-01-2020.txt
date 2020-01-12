@@ -1,0 +1,5 @@
+Sale(id=1, date=10-01-2020, totalAmount=30000.0, currency=CLP, clientId=24668924-5, payments=[Payment(paymentMethod=CASH, amount=14000.0), Payment(paymentMethod=CREDIT, amount=16000.0)], items=[Item(code=A3501, brand=Colun, name=Leche Entera, description=Leche Entera 1 lt, price=2000.0, quantity=5), Item(code=B6657, brand=Johnnie Walker, name=Black Label, description=Botella 0.75 lt, price=20000.0, quantity=1)])
+Item(code=A3501, brand=Colun, name=Leche Entera, description=Leche Entera 1 lt, price=2000.0, quantity=5)
+Item(code=B6657, brand=Johnnie Walker, name=Black Label, description=Botella 0.75 lt, price=20000.0, quantity=1)
+Payment(paymentMethod=CASH, amount=14000.0)
+Payment(paymentMethod=CREDIT, amount=16000.0)

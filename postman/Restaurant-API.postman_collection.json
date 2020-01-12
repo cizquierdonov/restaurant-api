@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "9d8ce52a-0505-47c3-a37f-2c3e44fcd15d",
+		"name": "Restaurant-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/restaurant/api/v1/authentication/loginUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user\": {\n\t\t\"name\": \"Carlos Izquierdo\",\n\t\t\"username\": \"cizquierdo\",\n\t\t\"password\": \"abc123\"\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/restaurant/api/v1/authentication/loginUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restaurant",
+						"api",
+						"v1",
+						"authentication",
+						"loginUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/restaurant/api/v1/authentication/sales/10-01-2020",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJSZXN0YXVyYW50QVBJX0NJMTAwMTIwMjAiLCJpYXQiOjE1Nzg3ODQ5ODYsImV4cCI6MTU3ODc4NTI4Nn0.7aDBms8EnFSfdXwUZ36uz8hcchKu4nt8DifTUr5_7dB0BKHONK-5Br1RgT7Ft5RC3rB9g1CrP5qSi1ZNJsd21w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/restaurant/api/v1/sales/10-01-2020",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restaurant",
+						"api",
+						"v1",
+						"sales",
+						"10-01-2020"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/restaurant/api/v1/authentication/sales/create",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJSZXN0YXVyYW50QVBJX0NJMTAwMTIwMjAiLCJpYXQiOjE1Nzg3ODQ0NzUsImV4cCI6MTU3ODc4NDc3NX0.kyXX8dVyyluw-tDl7hk7hu2gdmb5OP-rNTcxgvLi6ioqt40sqQIsFdKHArnL6X7rS05Zl5Lnwrjpo2wA-yl6dw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sales\": [\r\n        {\r\n            \"id\": 13,\r\n            \"date\": \"07-01-2020\",\r\n            \"totalAmount\": 5.0,\r\n            \"currency\": \"USD\",\r\n            \"clientId\": \"24668924-5\",\r\n            \"payments\": [\r\n                {\r\n                    \"paymentMethod\": \"DEBIT\",\r\n                    \"amount\": 2.5\r\n                },\r\n                {\r\n                    \"paymentMethod\": \"CASH\",\r\n                    \"amount\": 2.5\r\n                }\r\n            ],\r\n            \"items\": [\r\n                {\r\n                    \"code\": \"C99874\",\r\n                    \"brand\": \"Coca Cola\",\r\n                    \"name\": \"Coca Cola Light\",\r\n                    \"description\": \"Coca Cola Light 3 lt\",\r\n                    \"price\": 3.0,\r\n                    \"quantity\": 1\r\n                },\r\n                {\r\n                    \"code\": \"C99899\",\r\n                    \"brand\": \"Coca Cola\",\r\n                    \"name\": \"Coca Cola Zero\",\r\n                    \"description\": \"Coca Cola Zero 2 lt\",\r\n                    \"price\": 2.0,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/restaurant/api/v1/sales/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restaurant",
+						"api",
+						"v1",
+						"sales",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

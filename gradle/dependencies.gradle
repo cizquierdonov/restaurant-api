@@ -1,0 +1,49 @@
+ext {
+    commonsLang3Ver = '3.6'
+    junitVer = '4.12'
+    libLatamLoggerVer = '1.1.2'
+    mockitoCoreVer = '2.10.0'
+    springBootVer = '2.0.0.RELEASE'
+    springVer = '5.1.2.RELEASE'
+    springfoxVer = '2.7.0'
+    modelMapper = '2.3.0'
+    jsonWebToken = '0.9.1'
+}
+
+// The following dependencies are strictly necessary to have a working project.
+dependencies {
+
+    // General deps
+    compile "org.apache.commons:commons-lang3:${commonsLang3Ver}"
+    compile "org.springframework.boot:spring-boot-starter-web-services:${springBootVer}"
+    compile "org.modelmapper:modelmapper:${modelMapper}"
+
+    // Springfox (Swagger) deps
+    compile "io.springfox:springfox-core:${springfoxVer}"
+    compile "io.springfox:springfox-spi:${springfoxVer}"
+    compile "io.springfox:springfox-spring-web:${springfoxVer}"
+    compile "io.springfox:springfox-swagger-common:${springfoxVer}"
+    compile "io.springfox:springfox-swagger2:${springfoxVer}"
+    compile "io.springfox:springfox-swagger-ui:${springfoxVer}"
+
+
+    // JSON Web Token deps
+    compile "io.jsonwebtoken:jjwt:${jsonWebToken}"
+
+    // Logging deps
+
+    // Spring Actuator deps
+    compile "org.springframework.boot:spring-boot-actuator:${springBootVer}"
+
+    // Testing deps
+    // Mockito
+    testCompile "org.mockito:mockito-core:${mockitoCoreVer}"
+    // JUnit
+    testCompile "junit:junit:${junitVer}"
+    // Spring testing facilities
+    testCompile "org.springframework:spring-test:${springVer}"
+    testCompile "org.springframework.boot:spring-boot-test:${springBootVer}"
+
+    // Misc project's deps
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}

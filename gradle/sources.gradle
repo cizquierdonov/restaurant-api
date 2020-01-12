@@ -1,0 +1,24 @@
+sourceSets {
+    unitTest {
+        java {
+            srcDir 'src/test/unitTest/java'
+        }
+        resources {
+            srcDir 'src/test/unitTest/resources'
+        }
+        compileClasspath += sourceSets.main.runtimeClasspath
+        compileClasspath += sourceSets.test.compileClasspath
+        runtimeClasspath = output + compileClasspath
+    }
+    integrationTest {
+        java {
+            srcDir 'src/test/integrationTest/java'
+        }
+        resources {
+            srcDir 'src/test/integrationTest/resources'
+        }
+        compileClasspath += sourceSets.main.runtimeClasspath
+        compileClasspath += sourceSets.test.compileClasspath
+        runtimeClasspath = output + compileClasspath
+    }
+}

@@ -1,0 +1,24 @@
+1;10-01-2020;30000.0;CLP;24668924-5;2;2
+A3501;Colun;Leche Entera;Leche Entera 1 lt;2000.0;5
+B6657;Johnnie Walker;Black Label;Botella 0.75 lt;20000.0;1
+CASH;14000.0
+CREDIT;16000.0
+
+2;05-01-2020;9000.0;CLP;25225981-3;1;1
+C99874;Coca Cola;Coca Cola Light 3 lt;3000.0;3
+DEBIT;9000.0
+10;06-01-2020;5.0;USD;083177578;2;2
+C99874;Coca Cola;Coca Cola Light;Coca Cola Light 3 lt;3.0;1
+C99899;Coca Cola;Coca Cola Zero;Coca Cola Zero 2 lt;2.0;1
+PAYCHECK;2.5
+CASH;2.5
+12;06-01-2020;5.0;USD;24668924-5;2;2
+C99874;Coca Cola;Coca Cola Light;Coca Cola Light 3 lt;3.0;1
+C99899;Coca Cola;Coca Cola Zero;Coca Cola Zero 2 lt;2.0;1
+DEBIT;2.5
+CASH;2.5
+13;07-01-2020;5.0;USD;24668924-5;2;2
+C99874;Coca Cola;Coca Cola Light;Coca Cola Light 3 lt;3.0;1
+C99899;Coca Cola;Coca Cola Zero;Coca Cola Zero 2 lt;2.0;1
+DEBIT;2.5
+CASH;2.5

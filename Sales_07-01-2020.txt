@@ -1,0 +1,5 @@
+Sale(id=13, date=07-01-2020, totalAmount=5.0, currency=USD, clientId=24668924-5, payments=[Payment(paymentMethod=DEBIT, amount=2.5), Payment(paymentMethod=CASH, amount=2.5)], items=[Item(code=C99874, brand=Coca Cola, name=Coca Cola Light, description=Coca Cola Light 3 lt, price=3.0, quantity=1), Item(code=C99899, brand=Coca Cola, name=Coca Cola Zero, description=Coca Cola Zero 2 lt, price=2.0, quantity=1)])
+Item(code=C99874, brand=Coca Cola, name=Coca Cola Light, description=Coca Cola Light 3 lt, price=3.0, quantity=1)
+Item(code=C99899, brand=Coca Cola, name=Coca Cola Zero, description=Coca Cola Zero 2 lt, price=2.0, quantity=1)
+Payment(paymentMethod=DEBIT, amount=2.5)
+Payment(paymentMethod=CASH, amount=2.5)
